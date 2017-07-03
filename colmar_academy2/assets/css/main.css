@@ -1,0 +1,322 @@
+
+/* Generic */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", "Helvetica", sans-serif;
+  color: #D3D3D3;
+  background-color: #F5F5F5;
+  margin: 0px;
+  text-align: left;
+}
+
+h1, h2, h3, h4 {
+  color: #333;
+  font-weight: bold;
+}
+
+p {
+  color: gray;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  margin-right: 1rem;
+  color: #D3D3D3;
+}
+
+.bg-dark {
+  background-color: #D3D3D3;
+}
+
+.bg-medium {
+  background-color: #E8E8E8;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  align-items: center;
+  align-content: center;
+}
+
+.header-title {
+  font-size: 1.5rem;
+}
+
+.header-title-alt {
+  font-weight: lighter;
+  color: #D3D3D3;
+}
+
+.header-logo {
+  margin-left: 1.5rem;
+  height:75%;
+}
+
+nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
+nav a {
+  color: #333;
+}
+
+/* Main Content */
+
+.main-content {
+  position: relative;
+  padding-top: 4rem; /* To offset for fixed header. */
+}
+
+.main-content h1 {
+  margin: 2rem 0;
+}
+
+.section {
+  display: flex;
+}
+
+.img-container {
+  margin: 2rem 1.5rem;
+}
+
+.img-container img {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.button {
+  background-color: #333;
+  text-align: center;
+  padding: 1rem 0;
+  min-width: 100%;
+  margin: .5rem 0;
+}
+
+.stack {
+  flex-direction: column;
+}
+
+/* Cards */
+
+.card h3, .card p {
+  margin: .5rem 0;
+}
+
+.card a {
+  color: blue;
+}
+
+.card-stack {
+  display: block;
+}
+
+.card-stack .card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width:100%;
+  height: 10.5rem;
+  min-width: 423px;
+  max-width: 423px;
+}
+
+.card-stack .img-container {
+  max-width: 35%;
+  min-width: 35%;
+  height: auto;
+  margin: 1rem;
+}
+
+.card-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card-grid .card {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  background-color: white;
+  margin: 2rem 1rem;
+}
+
+.card-grid .img-container {
+  margin: 0;
+}
+
+.card-grid .img {
+  display: block;
+  max-width: 100%;
+}
+
+.info {
+  display: block;
+  justify-content: center;
+  margin: 1rem;
+  vertical-align: middle;
+}
+
+/* Sections */
+#banner {
+  align-items: center;
+}
+
+#banner .img-container {
+  max-width: 60%;
+  min-width: 60%;
+  height: auto;
+}
+
+#banner h4 {
+  margin: 1.5rem 0;
+}
+
+#learn h1, #thesis h1{
+  text-align: center;
+}
+
+#information h1 {
+  margin-bottom: 1.5rem;
+}
+
+#thesis
+.quote {
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+#thesis .info, #information .info {
+  margin-left: 1.5rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 1.5rem;
+  }
+
+
+@media only screen and (max-width: 700px) {
+
+  /* Custom media query for header as too wide. Set to below tablet default */
+
+  /* Generic */
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  ul {
+    display:flex;
+    padding: 0px;
+  }
+
+  li {
+    margin: auto;
+  }
+
+  .img-container {
+    margin: 0;
+  }
+
+  /* Cards */
+
+  .section {
+    flex-direction: column;
+  }
+
+  .card-stack .card {
+    display:block;
+    height: auto;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .card-stack .img-container {
+    max-width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    height: auto;
+  }
+
+  .card-grid .card {
+    margin: .5rem 0;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: #D3D3D3;
+  }
+
+  .card-info {
+    margin: 0 1rem;
+  }
+
+  /* Sections */
+  #banner  {
+    align-items: baseline;
+  }
+
+  #banner .img-container {
+    max-width: 100%;
+    min-width: 100%;
+    height: 11.25rem;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  #information .card {
+    background-color: inherit;
+  }
+
+  #learn {
+    background-color: inherit;
+  }
+
+  #learn .img-container, #learn p{
+    display: none;
+  }
+
+  #learn .card-grid {
+    display:block;
+
+  }
+
+}
